@@ -1,0 +1,24 @@
+.link {
+  height: 50px;
+  width: 50px;
+  background-color: #000;
+  border-radius: 100%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  right: 5vw;
+}
+
+.link.linkedin {
+  bottom: 5vh;
+}
+
+.link.github {
+  bottom: 12vh;
+}
+
+.link.mail {
+  bottom: 19vh;
+}
+/*# sourceMappingURL=links.css.map */

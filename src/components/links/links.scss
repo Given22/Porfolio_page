@@ -1,0 +1,19 @@
+.link{
+  height: 50px;
+  width: 50px;
+  background-color: #000;
+  border-radius: 100%;
+  position: absolute;
+  display: flex;
+  right: 5vw;
+  
+  &.linkedin{
+    bottom: 5vh;
+  }
+  &.github{
+    bottom: 12vh;
+  }
+  &.mail{
+    bottom: 19vh;
+  }
+}

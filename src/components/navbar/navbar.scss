@@ -1,0 +1,29 @@
+.logo{
+  font-size: 1rem;
+  margin-left: 1.5rem;
+  display: flex;
+  >img {
+    height: 4rem;
+  }
+}
+
+.menu{
+  position: absolute;
+  top: 0;
+  right: 10vw;
+  
+  display: flex;
+  gap: 1rem;
+  
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.darkModeSwitch {
+  height: 100px;
+  width: 50px;
+  border: 1px solid rgb(0, 0, 0);
+  position: absolute;
+  top: 0;
+  right: 5vw;
+}
