@@ -1,23 +1,21 @@
-import './App.css';
+import './App.scss';
 
 import React from 'react';
-import {useState} from 'react';
 
-import { Nav } from './components'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import { Home, About, Project, CV } from './routes'
 
 export default function App() {
-
-  const [darkmode, setDarkMode] = useState(false)
-
-  function toggleDarkMode(){
-    setDarkMode(!darkmode)
-    console.log(darkmode)
-  }
-
   return (
-    <div className="App">
-      <Nav toggleDarkMode={toggleDarkMode}/>
-    </div>
+    <BrowserRouter>
+      <Routes >
+        <Route element={<Home />} path="/" exact />
+        <Route element={<About />} path="/about" />
+        <Route element={<Project />} path="/:slug" />
+        <Route element={<CV />} path="/cv" />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './navbar.css'
+import './navbar.scss'
 
-export default function Navbar({toggleDarkMode}){
+export default function Navbar(){
   return (
     <div id="Navbar">
       <div className="logo">
@@ -14,7 +14,7 @@ export default function Navbar({toggleDarkMode}){
         <h3>Skills</h3>
         <h3>Contact</h3>
       </div>
-      <div className="darkModeSwitch" onClick={() => toggleDarkMode()}>
+      <div className="darkModeSwitch">
       </div>
     </div>
   )
