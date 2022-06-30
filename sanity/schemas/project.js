@@ -28,21 +28,23 @@ export default {
     {
       name: 'body',
       title: 'Body',
-      type: 'blockContent',
+      type: 'text',
     },
-  ],
-
-  preview: {
-    select: {
-      title: 'title',
-      author: 'author.name',
-      media: 'mainImage',
+    {
+      name: 'github',
+      title: 'Github',
+      type: 'url'
     },
-    prepare(selection) {
-      const {author} = selection
-      return Object.assign({}, selection, {
-        subtitle: author && `by ${author}`,
-      })
+    {
+      name: 'live',
+      title: 'Live',
+      type: 'url'
     },
-  },
+    {
+      name: 'tech',
+      title: 'Tech',
+      type: 'array',
+      of: [{name: 'icon', type: 'string'}]
+    }
+  ]
 }

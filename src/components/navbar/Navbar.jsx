@@ -2,6 +2,7 @@ import React from 'react';
 
 import './navbar.scss'
 
+//Navbar Component
 export default function Navbar(){
   return (
     <div id="Navbar">
