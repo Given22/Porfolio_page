@@ -1,29 +1,69 @@
-.logo{
-  font-size: 1rem;
-  margin-left: 1.5rem;
+#Navbar {
+  position: fixed;
+  top: 0;
   display: flex;
-  >img {
-    height: 4rem;
+  box-sizing: border-box;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+
+  .logo {
+    width: 50px;
+    height: 50px;
+    background-color: var(--base-color-dark);
+    box-shadow: var(--fancy-shadow);
+    border-radius: 102px;
+    text-align: center;
+    h1 {
+      color: var(--base-color-light);
+
+      font-family: "Kanit";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 50px;
+      text-transform: capitalize;
+      
+    }
   }
-}
-
-.menu{
-  position: absolute;
-  top: 0;
-  right: 10vw;
   
-  display: flex;
-  gap: 1rem;
-  
-  font-size: 1rem;
-  margin-top: 1rem;
-}
-
-.darkModeSwitch {
-  height: 100px;
-  width: 50px;
-  border: 1px solid rgb(0, 0, 0);
-  position: absolute;
-  top: 0;
-  right: 5vw;
+  .menu {
+    display: none;
+    gap: 3vw;
+    line-height: 40px;
+    a {
+      font-weight: 600;
+      letter-spacing: -0.005em;
+      font-size: 1.1rem;
+      text-decoration: none;
+      cursor: pointer;
+      color: var(--base-color-dark);
+    }
+    
+    .darkModeSwitch {
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      background-color: var(--base-color-dark);
+      color: var(--base-color-light);
+      text-align: center;
+      box-shadow: var(--fancy-shadow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg{
+        cursor: pointer;
+        path{
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .menu {
+      display: flex;
+    }
+  }
 }

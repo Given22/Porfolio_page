@@ -1,19 +1,36 @@
+#Links{
+  position: fixed;
+  display: flex;
+  gap: 1rem;
+  box-sizing: border-box;
+  padding: 2rem 3rem;
+  flex-direction: column;
+  right: 0;
+  bottom: 0;
+}
+
 .link{
   height: 50px;
   width: 50px;
-  background-color: #000;
+  background-color: var(--base-color-dark);
+  box-shadow: var(--fancy-shadow);
   border-radius: 100%;
-  position: absolute;
   display: flex;
-  right: 5vw;
+  justify-content: center;
+  align-items: center;
   
-  &.linkedin{
-    bottom: 5vh;
-  }
-  &.github{
-    bottom: 12vh;
-  }
-  &.mail{
-    bottom: 19vh;
+  cursor: pointer;
+  
+  > .links_link{
+    color: var(--base-color-yellow);
+    height: 24px;
+    width: 24px;
+    text-decoration: none;
+    svg{
+      cursor: pointer;
+      path{
+        cursor: pointer;
+      }
+    }
   }
 }

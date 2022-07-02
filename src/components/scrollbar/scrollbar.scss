@@ -1,0 +1,29 @@
+#ScrollBar{
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translatey(-50%);
+  box-sizing: border-box;
+  padding: 1rem 3rem;
+  
+  .dots{
+    display: flex;
+    width: 30px;
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+  }
+}
+
+.dot_icon{
+  font-size: 20px;
+  color: var(--base-color-dark);
+  circle{
+    cursor: pointer;
+  }
+  
+}
+
+.active{
+  font-size:30px;
+}

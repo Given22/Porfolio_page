@@ -1,21 +1,31 @@
-import React from 'react';
+import React from "react";
 
-import './navbar.scss'
+// import Iconify for fancy icons
+import { Icon } from "@iconify/react";
+
+import "./navbar.scss";
 
 //Navbar Component
-export default function Navbar(){
+export default function Navbar() {
   return (
-    <div id="Navbar">
+    <nav id="Navbar">
       <div className="logo">
         <h1>D</h1>
       </div>
       <div className="menu">
-        <h3>Projects</h3>
-        <h3>Skills</h3>
-        <h3>Contact</h3>
+        <a href="#Projects" className="navbar_link">
+          Projects
+        </a>
+        <a href="#Skills" className="navbar_link">
+          Skills
+        </a>
+        <a href="#Contact" className="navbar_link">
+          Contact
+        </a>
+        <div className="darkModeSwitch">
+          <Icon className="darkoModeIcon" icon="bi:moon-fill" height="18" />
+        </div>
       </div>
-      <div className="darkModeSwitch">
-      </div>
-    </div>
-  )
+    </nav>
+  );
 }

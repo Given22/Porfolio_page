@@ -1,20 +1,20 @@
 import "./App.scss";
 
 /* Importing the React library and the useState and useEffect hooks from the React library. */
-import  React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home, About, Project, CV } from "./routes";
 
 /* Importing the sanityClient from the client.js file. */
 import sanityClient from "./client.js";
 
-import Navbar from "./components/navbar/Navbar";
+import Navigation from "./components/navigation/navigation";
 
 export default function App() {
-
   const [projects, setProjects] = useState([]);
   const [skills, setSkills] = useState("");
-  const [links, setLinks] = useState("")
+  const [links, setLinks] = useState("");
+  
 
   useEffect(() => {
     sanityClient
@@ -45,7 +45,7 @@ export default function App() {
       )
       .then((data) => setSkills(data))
       .catch(console.error);
-      
+
     sanityClient
       .fetch(
         `*[_type == "links"]{
@@ -57,14 +57,12 @@ export default function App() {
       .then((data) => setLinks(data))
       .catch(console.error);
   }, []);
-
-  useEffect(() => {
-    console.log(skills, projects, links);
-  }, [skills, projects, links]);
   
+  useEffect(() => {console.log(projects,skills,links)},[projects,skills,links]);
+
   return (
     <BrowserRouter>
-      <Navbar />
+      <Navigation links={links} />
       <Routes>
         <Route element={<Home projects={projects} />} path="/" exact />
         <Route element={<About />} path="/about" />
