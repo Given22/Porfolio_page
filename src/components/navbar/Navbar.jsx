@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Link, animateScroll as scroll } from "react-scroll";
+
 // import Iconify for fancy icons
 import { Icon } from "@iconify/react";
 

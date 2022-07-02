@@ -8,7 +8,7 @@ export default function Header(){
     <>
       <div id='Header'>
         <div className='header_text'>
-          <h1>Hello i’m Damian Sroczyński</h1>
+          <h1>Hi i’m Damian Sroczyński</h1>
           <h2>Front-end Developer</h2>
           <p>JavaScript & React engineer</p>
         </div>

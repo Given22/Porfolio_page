@@ -9,10 +9,19 @@ body {
   
   background-repeat: no-repeat;
   background-size: auto;
-  height: 500vh;
   // overflow: hidden;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+}
+
+*, html {
+
+  scroll-behavior: smooth !important;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
 }
 
 body::-webkit-scrollbar {

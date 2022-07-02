@@ -9,11 +9,9 @@ import "./styles/Home.scss";
 export default function Home({projects}) {
   
   return (
-    <section id="Home">
+    <div id="Home">
       <Header />
-      <Projects projects={projects}/>
-    </section>
+      <Projects projects={projects} />
+    </div>
   );
 }
-
-    // 

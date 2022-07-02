@@ -13,7 +13,7 @@ import Navigation from "./components/navigation/navigation";
 export default function App() {
   const [projects, setProjects] = useState([]);
   const [skills, setSkills] = useState("");
-  const [links, setLinks] = useState("");
+  const [links, setLinks] = useState(null);
   
 
   useEffect(() => {
@@ -29,7 +29,8 @@ export default function App() {
           url
         }},
         tech,
-        github
+        github,
+        live
       
     }`
       )
