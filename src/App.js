@@ -5,16 +5,18 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home, About, Project, CV } from "./routes";
 
+// import db from "./firebase";
 /* Importing the sanityClient from the client.js file. */
 import sanityClient from "./client.js";
 
 import Navigation from "./components/navigation/navigation";
 
+
+
 export default function App() {
   const [projects, setProjects] = useState([]);
   const [skills, setSkills] = useState("");
   const [links, setLinks] = useState(null);
-  
 
   useEffect(() => {
     sanityClient
@@ -65,10 +67,10 @@ export default function App() {
     <BrowserRouter>
       <Navigation links={links} />
       <Routes>
-        <Route element={<Home projects={projects} />} path="/" exact />
+        <Route element={<Home projects={projects} skills={skills} links={links} />} path="/" exact />
         <Route element={<About />} path="/about" />
         <Route
-          element={<Project projects={projects} />}
+          element={<Project projects={projects} links={links}/>}
           path="/project/:projectName"
         />
         <Route element={<CV />} path="/cv" />

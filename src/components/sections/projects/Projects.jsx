@@ -14,7 +14,7 @@ export default function Projects({ projects }) {
   const [swiperRef, setSwiperRef] = useState(null);
 
   return (
-    <div id="Projects">
+    <section id="Projects">
       <div id="Projects_Slider">
         <div className="slider_arrow ">
           <Icon
@@ -56,7 +56,7 @@ export default function Projects({ projects }) {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

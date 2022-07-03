@@ -1,7 +1,5 @@
 import React from "react";
 
-import { Link, animateScroll as scroll } from "react-scroll";
-
 // import Iconify for fancy icons
 import { Icon } from "@iconify/react";
 
@@ -15,13 +13,13 @@ export default function Navbar() {
         <h1>D</h1>
       </div>
       <div className="menu">
-        <a href="#Projects" className="navbar_link">
+        <a href="/#Projects" className="navbar_link">
           Projects
         </a>
-        <a href="#Skills" className="navbar_link">
+        <a href="/#Skills" className="navbar_link">
           Skills
         </a>
-        <a href="#Contact" className="navbar_link">
+        <a href="/#Contact" className="navbar_link">
           Contact
         </a>
         <div className="darkModeSwitch">
