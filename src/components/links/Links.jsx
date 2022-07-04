@@ -4,7 +4,6 @@ import { Icon } from "@iconify/react";
 import "./links.scss";
 
 export default function Links({ links }) {
-  console.log(links);
   return (
     <div id="Links">
       {links && (

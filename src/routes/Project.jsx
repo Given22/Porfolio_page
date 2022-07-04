@@ -16,7 +16,7 @@ export default function Project({projects, links}) {
   console.log(project)
   
   useEffect(() => {
-    setProject(projects.find(project => project.slug.current === projectName))
+    setProject(projects.find(project => project.slug === projectName))
   }, [projects, projectName]);
   
   return (
@@ -26,13 +26,13 @@ export default function Project({projects, links}) {
         <>
           <h1 className="project_title">{project.title}</h1>
           <div className="project_imgbox">
-            <img className='project_img' src={project.mainImage.asset.url} alt={project.title} />
+            <img className='project_img' src={project.image} alt={project.title} />
           </div>
           <div className="project_links">
-            <a href={project.live} target="_blank" rel="noopener noreferrer" className="project_button-link">
+            <a href={project.live || ''} target="_blank" rel="noopener noreferrer" className="project_button-link">
               <Icon className="project_link-icon" icon="ant-design:eye-filled" height="24" />
             </a>
-            <a href={project.github} target="_blank" rel="noopener noreferrer" className="project_button-link">
+            <a href={project.github|| ''} target="_blank" rel="noopener noreferrer" className="project_button-link">
               <Icon className="project_link-icon" icon="uim:github-alt" height="24" />
             </a>
           </div>

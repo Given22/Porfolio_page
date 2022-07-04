@@ -16,12 +16,13 @@ export default function Projects({ projects }) {
   return (
     <section id="Projects">
       <div id="Projects_Slider">
-        <div className="slider_arrow ">
+        <div className="slider_arrow " key='left'>
           <Icon
             onClick={() => swiperRef.slidePrev()}
             className="arrow_left"
             icon="ep:arrow-left-bold"
             height="50"
+            
           />
         </div>
         <Swiper
@@ -31,54 +32,33 @@ export default function Projects({ projects }) {
           loop={true}
           className="mySwiper"
           id='swiper'
+          key='swiper'
         >
           {projects.map((project) => {
             return (
               <SwiperSlide>
                 <Card
-                  key={project.slug.current}
-                  src={project.mainImage.asset.url}
-                  slug={project.slug.current}
+                  key={project.title}
+                  src={project.image}
+                  slug={project.slug}
                   title={project.title}
-                  github={project.github}
-                  live={project.live}
-                />
+                  github={project.github || ''}
+                  live={project.live || ''}
+            />
               </SwiperSlide>
             );
           })}
         </Swiper>
-        <div className="slider_arrow ">
+        <div className="slider_arrow " key='right'>
           <Icon
             onClick={() => swiperRef.slideNext()}
             className="arrow_right"
             icon="ep:arrow-right-bold"
             height="50"
+            
           />
         </div>
       </div>
     </section>
   );
 }
-
-  // const [index, setIndex] = useState(0);
-
-  // function whichIndex(index) {
-  //   if (index === projects.length) {
-  //     index = 0;
-  //   } else if (index < 0) {
-  //     index = projects.length - 1;
-  //   }
-  //   return index;
-  // }
-
-  // const PrevIndex = () => {
-  //   setIndex((prev) => {
-  //     return whichIndex(prev - 1);
-  //   });
-  // };
-
-  // const NextIndex = () => {
-  //   setIndex((prev) => {
-  //     return whichIndex(prev + 1);
-  //   });
-  // };
