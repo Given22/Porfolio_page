@@ -1,19 +1,21 @@
 import React, {useState, useEffect, useMemo, useRef} from 'react';
 
 import Links from '../../links/Links';
+import ContactLinks from '../../contactLinks/ContactLinks';
 
 import './Contact.scss'
 
-export default function Contact({links}) {
+export default function Contact({links, refLink, theme}) {
 
 const contact = useRef(null);
 
 const isInViewport = useIsInViewport(contact);
 
 return (
-  <section id='Contact' >
-    <Links links={links}/>
-    <h1 ref={contact}>Contact {isInViewport && 'is IN ViewPort'}</h1>
+  <section ref={refLink} id='Contact' className={theme}>
+    <Links links={links} theme={theme} isInViewport={isInViewport}/>
+    <ContactLinks refe={contact} links={links} theme={theme} isInViewport={isInViewport} />
+    <p ref={contact} className='copyright'>© 2022 Damian Sroczyński All Rights Reserved</p>
   </section>
 )}
 

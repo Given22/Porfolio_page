@@ -1,8 +1,38 @@
 #Home{
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
-  > section {
-    scroll-snap-align: start;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  height: 100%;
+  background: linear-gradient(159.28deg, #EAEFD3 55.13%, rgba(220, 196, 142, 0.66) 107.27%);
+}
+
+#Home.dark{
+  background: linear-gradient(159.28deg, var(--base-color-blue) 55.13%, var(--base-color-dark) 107.27%);
+}
+
+@media screen and (min-width: 1024px) {
+  #Home{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+    > section {
+      scroll-snap-align: start;
+    }
   }
+}
+
+// Tablet
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+}
+
+// Mobile
+@media screen and (max-width: 767px) {
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
 }

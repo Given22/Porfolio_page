@@ -5,7 +5,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
-  background: linear-gradient(159.28deg, #EAEFD3 55.13%, rgba(220, 196, 142, 0.66) 107.27%);
+  background-color: var(--base-color-dark);
   
   background-repeat: no-repeat;
   background-size: auto;
@@ -15,18 +15,33 @@ body {
 }
 
 *, html {
-
+  transition: all 0.1s ease;
   scroll-behavior: smooth !important;
 }
 
-::-webkit-scrollbar {
-  width: 0px;
-  background: transparent; /* make scrollbar transparent */
+@media only screen and (min-width: 1024px) {
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-background);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-track{
+    background: var(--scrollbar-background-track);
+  }
 }
 
-body::-webkit-scrollbar {
-  display: none;
+@media only screen and (max-width: 1023px) {
+  ::-webkit-scrollbar {
+      width: 0px;
+      background: transparent;
+  }
 }
+
+
 
 * {
   margin: 0;
@@ -44,6 +59,9 @@ body::-webkit-scrollbar {
   --base-color-light: #EAEFD3;
   --base-color-blue: #505168;
   --base-color-yellow: #DCC48E;
+  
+  --scrollbar-background: #27233A;
+  --scrollbar-background-track: #27233A;
   
   --fancy-shadow: 0px 39px 11px rgba(0, 0, 0, 0.01), 0px 25px 10px rgba(0, 0, 0, 0.04), 0px 14px 9px rgba(0, 0, 0, 0.15), 0px 6px 6px rgba(0, 0, 0, 0.26), 0px 2px 3px rgba(0, 0, 0, 0.29), 0px 0px 0px rgba(0, 0, 0, 0.3);
 }

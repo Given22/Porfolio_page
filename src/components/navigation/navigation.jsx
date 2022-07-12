@@ -3,14 +3,16 @@ import React from 'react';
 import './navigation.scss'
 
 import Navbar from '../navbar/Navbar'
-import Scrollbar from '../scrollbar/Scrollbar'
 
-export default function Navigation({links}){
-  console.log(links)
+import {ThemeContext} from '../../context/ThemeContext'
+
+export default function Navigation({ setTheme}){
+
+  const {theme} = React.useContext(ThemeContext)
+  
   return (
     <div id="Navigation">
-      <Navbar />
-      <Scrollbar />
+      <Navbar setTheme={setTheme} theme={theme}/>
     </div>
   )
 }

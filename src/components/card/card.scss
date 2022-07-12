@@ -1,31 +1,37 @@
-.card{
+.card.dark{
+  background-color: var(--base-color-light);
+  
+  .card_button-link{
+    color: var(--base-color-dark);
+    background-color: var(--base-color-yellow);
+  }
+}
+
+.card.light{
   background-color: var(--base-color-dark);
+  .card_button-link{
+    color: var(--base-color-yellow);
+    background-color: var(--base-color-blue);
+  }
+}
+
+.card{
   border-radius: 18px;
-  width: 80%;
   margin: 0 auto;
 }
 
 .card_bottom{
   display: flex;
-  justify-content: center;
-  gap: 5%;
 }
 
 .card_button-link{
-  color: var(--base-color-yellow);
-  background-color: var(--base-color-blue);
   box-shadow: var(--fancy-shadow);
   border-radius: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   
-  margin: 38px 0;
-  
   cursor: pointer;
-  
-  height: 56px;
-  width: 56px;
   text-decoration: none;
   text-align: center;
   svg{
@@ -71,3 +77,51 @@
   border-radius: 18px 18px 0 0;
 }
 
+
+// Desktop
+@media screen and (min-width: 1024px) {
+  .card{
+    width: 80%;
+    .card_bottom{
+      justify-content: center;
+      gap: 5%;
+      .card_button-link{
+        height: 50px;
+        width: 50px;
+        margin: 20px 0;
+      }
+    }    
+  }
+}
+
+// Tablet
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .card{
+    width: 90%;
+    .card_bottom{
+      justify-content: center;
+      gap: 5%;
+      .card_button-link{
+        height: 40px;
+        width: 40px;
+        margin: 20px 0;
+      }
+    }  
+  }
+}
+
+// Mobile
+@media screen and (max-width: 767px) {
+  .card{
+    width: 100%;
+    height: 100%;
+    .card_bottom{
+      justify-content: space-evenly;
+      .card_button-link{
+        height: 40px;
+        width: 40px;
+        margin: 20px 0;
+      }
+    }  
+  }
+}

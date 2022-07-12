@@ -1,0 +1,78 @@
+#Menu.dark{
+  a {
+    color: var(--base-color-light);
+  }
+  .menu_darkModeSwitch {
+    background-color: var(--base-color-light);
+    color: var(--base-color-dark);
+  }
+}
+
+#Menu.light{
+  a {
+    color: var(--base-color-dark);
+  }
+  .menu_darkModeSwitch {
+    background-color: var(--base-color-dark);
+    color: var(--base-color-light);
+  }
+}
+
+#Menu {
+  display: flex;
+  gap: 3vw;
+  line-height: 40px;
+  a {
+    font-weight: 600;
+    letter-spacing: -0.005em;
+    font-size: 1.1rem;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .menu_darkModeSwitch{
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    text-align: center;
+    box-shadow: var(--fancy-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg{
+      cursor: pointer;
+      path{
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+// Desktop
+@media screen and (min-width: 1024px) {
+  #Menu{
+    padding: 1rem 3rem;
+    .menu {
+      display: flex;
+    }
+  }
+}
+
+// Tablet
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  #Menu{
+    padding: 1rem;
+    .menu {
+      display: flex;
+    }
+  }
+}
+
+// Mobile
+@media screen and (max-width: 767px) {
+  #Menu{
+    padding: 0rem;
+  }
+}

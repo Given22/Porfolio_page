@@ -1,0 +1,80 @@
+//Dark mode
+#CV.dark {
+  > h2 {
+    color: var(--base-color-light);
+  }
+  > p {
+    color: var(--base-color-light);
+  }
+  background: linear-gradient(
+    159.28deg,
+    var(--base-color-blue) 55.13%,
+    var(--base-color-dark) 107.27%
+  );
+}
+
+//Light mode
+#CV.light {
+  > h2 {
+    color: var(--base-color-dark);
+  }
+  > p {
+    color: var(--base-color-dark);
+  }
+  background: linear-gradient(
+    159.28deg,
+    var(--base-color-light) 55.13%,
+    var(--base-color-yellow) 107.27%
+  );
+}
+
+// For all devices:
+#CV {
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  
+  h2{
+    margin-bottom: 2rem;
+  }
+  
+  a {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// Desktop
+@media screen and (min-width: 1024px) {
+  #CV {
+    padding: 10% 20%;
+    a {
+      width: 80%;
+    }
+  }
+}
+
+// Tablet
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  #CV {
+    padding: 10% 15%;
+    a {
+      width: 100%;
+    }
+  }
+}
+
+// Mobile
+@media screen and (max-width: 767px) {
+  #CV {
+    padding: 30% 10%;
+    a {
+      width: 100%;
+    }
+  }
+}

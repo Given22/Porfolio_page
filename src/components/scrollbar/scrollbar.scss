@@ -4,7 +4,7 @@
   top: 50%;
   transform: translatey(-50%);
   box-sizing: border-box;
-  padding: 1rem 3rem;
+  padding: 1rem 6rem;
   
   .dots{
     display: flex;
@@ -24,6 +24,18 @@
   
 }
 
+
 .active{
   font-size:30px;
+}
+
+
+.dot_icon.dark{
+  color: var(--base-color-light);
+}
+
+#ScrollBar.dark{
+  .dot_icon{
+    color: var(--base-color-light);
+  }
 }

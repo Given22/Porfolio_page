@@ -1,13 +1,34 @@
 #Contact{
 
   box-sizing: border-box;
-  padding: 3% 20%;
   width: 100%;
-  height: 100vh;
   
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex-wrap: wrap;
   align-items: center;
+}
+
+// Desktop
+@media screen and (min-width: 1024px) {
+  #Contact{
+    padding: 3% 20%;
+    min-height: 100vh;
+  }
+}
+
+// Tablet
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  #Contact{
+    padding: 3% 20%;
+    min-height: 100vh;
+  }
+}
+
+// Mobile
+@media screen and (max-width: 767px) {
+  #Contact{
+    padding: 5%;
+    min-height: 70vh;
+  }
 }
