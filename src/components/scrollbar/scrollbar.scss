@@ -20,7 +20,6 @@
   circle{
     cursor: pointer;
   }
-  
 }
 
 
@@ -42,6 +41,12 @@
 @media screen and (min-width: 1024px) {
   #ScrollBar{
     padding: 1rem 6rem;
+    .dots{
+      width: 30px;
+      .dot_icon{
+        font-size: 20px;
+      }
+    }
   }
 }
 
@@ -49,6 +54,12 @@
 @media screen and (max-width: 1023px) and (min-width: 768px) {
   #ScrollBar{
     padding: 3rem;
+    .dots{
+      width: 20px;
+      .dot_icon{
+        font-size: 15px;
+      }
+    }
   }
 }
 
@@ -56,5 +67,11 @@
 @media screen and (max-width: 767px) {
   #ScrollBar{
     padding: 1rem;
+    .dots{
+      width: 15px;
+      .dot_icon{
+        font-size: 10px;
+      }
+    }
   }
 }
