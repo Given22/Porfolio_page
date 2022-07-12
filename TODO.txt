@@ -1,0 +1,10 @@
+- poprawić meta dane i ogólnie cały header wraz z manifest.json
+
+## Poza portfolio
+
+- strony hostowane na netlify 
+- wszystkie projekty zbudowane np. przy pomocy parcela
+- utworzyć listę umiejętności
+- poprawić linkedin
+- napisać CV
+- na stonie banku dodać pokazywanie istniejących kont i pass do nich.
