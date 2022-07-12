@@ -1,0 +1,66 @@
+//Dark mode
+#About.dark{
+  >h2{
+    color: var(--base-color-light)
+  }
+  >p{
+    color: var(--base-color-light)
+  }
+  background: linear-gradient(159.28deg, var(--base-color-blue) 55.13%, var(--base-color-dark) 107.27%);
+}
+
+//Light mode
+#About.light{
+  >h2{
+    color: var(--base-color-dark)
+  }
+  >p{
+    color: var(--base-color-dark)
+  }
+  background: linear-gradient(159.28deg, var(--base-color-light) 55.13%, var(--base-color-yellow) 107.27%);
+}
+
+// For all devices:
+#About{
+  min-height: 100vh;
+  box-sizing: border-box;
+  
+  >p{
+    margin: 2rem 0;
+  }
+  .years{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+// Desktop
+@media screen and (min-width: 1024px) {
+  #About{
+    padding: 10% 20%;  
+    .years{
+      gap: 3rem;
+    }
+  }
+}
+
+// Tablet
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  #About{
+    padding: 10% 15%;
+    .years{
+      gap: 3rem;
+    }
+  }
+}
+
+// Mobile
+@media screen and (max-width: 767px) {
+  #About{
+    padding: 30% 10%;
+    .years{
+      gap: 2rem;
+    }
+  }
+}

@@ -1,0 +1,142 @@
+#Project{
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 8% 20%;
+  width:  100%;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  background: linear-gradient(-159.28deg, var(--base-color-light) 55.13%, var(--base-color-yellow) 107.27%);
+}
+
+.project_title{
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 54px;
+  text-transform: uppercase;
+  color: var(--base-color-dark);
+}
+
+.project_img{
+  width: 100%;
+  border-radius: 18px;
+}
+.project_imgbox{
+  width: 40vw;
+  position: relative;
+  display: flex;
+  border-radius: 18px;
+  box-shadow: var(--fancy-shadow);
+}
+
+.project_imgbox::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0px -101px 108px -24px rgba(0, 0, 0, 0.7);
+  border-radius: 18px;
+}
+
+.project_links{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.project_content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+  
+  p{
+    text-align: center;
+    font-size: 1.1rem;
+  }
+}
+
+.project_skills{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project_button-link{
+  background-color: var(--base-color-dark);
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  border-radius: 100%;
+  box-shadow: var(--fancy-shadow);
+  
+  .project_link-icon{
+    color: var(--base-color-yellow);
+  }
+}
+
+.project_skill{
+  display: flex;
+  width: 10rem;
+  flex-direction: column;
+  align-items: center;
+  color: var(--base-color-dark);
+}
+
+.project_skill::after{
+  content: "";
+  display: block;
+  width: 100.9%;
+  height: 3px;
+  background: var(--base-color-dark);
+  border-radius: 10px;
+  margin: 1rem 0;
+  box-shadow: var(--fancy-shadow);
+}
+
+
+
+
+
+
+
+
+#Project.dark{
+  background: linear-gradient(-159.28deg, var(--base-color-blue) 55.13%, var(--base-color-dark) 107.27%);
+
+  .project_title{
+    color: var(--base-color-light);
+  }
+  
+  .project_button-link{
+  background-color: var(--base-color-light);
+  
+    .project_link-icon{
+      color: var(--base-color-blue);
+    }
+  } 
+  
+  .project_skill{
+    color: var(--base-color-light);
+  }
+  
+  .project_content{
+    p{
+      color: var(--base-color-light);
+    }
+  }
+  
+  .project_skill::after{
+    background: var(--base-color-light);
+  }
+}
+
