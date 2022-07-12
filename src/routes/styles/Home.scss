@@ -10,7 +10,41 @@
   background: linear-gradient(159.28deg, var(--base-color-blue) 55.13%, var(--base-color-dark) 107.27%);
 }
 
-@media screen and (min-width: 1024px) {
+// @media screen and (min-width: 1024px) {
+//   #Home{
+//     scroll-snap-type: y mandatory;
+//     overflow-y: scroll;
+//     height: 100vh;
+//     > section {
+//       scroll-snap-align: start;
+//     }
+//   }
+// }
+
+// // Tablet
+// @media screen and (max-width: 1023px) and (min-width: 768px) {
+//   ::-webkit-scrollbar {
+//     width: 0px;
+//     background: transparent; /* make scrollbar transparent */
+// }
+// }
+
+// // Mobile
+// @media screen and (max-width: 767px) {
+//   ::-webkit-scrollbar {
+//     width: 0px;
+//     background: transparent; /* make scrollbar transparent */
+// }
+// }
+
+@media only screen and (hover: none) and (pointer: coarse){
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+  } 
+}
+
+@media (pointer: fine) {
   #Home{
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
@@ -19,20 +53,4 @@
       scroll-snap-align: start;
     }
   }
-}
-
-// Tablet
-@media screen and (max-width: 1023px) and (min-width: 768px) {
-  ::-webkit-scrollbar {
-    width: 0px;
-    background: transparent; /* make scrollbar transparent */
-}
-}
-
-// Mobile
-@media screen and (max-width: 767px) {
-  ::-webkit-scrollbar {
-    width: 0px;
-    background: transparent; /* make scrollbar transparent */
-}
 }
