@@ -44,12 +44,12 @@ export default function About() {
       <div id="About" className={theme}>
         <h2>Damian Sroczyński</h2>
         {about[0] && <p>{about[0].body}</p>}
+        {about[0] && <p>{about[0].hobby}</p>}
         <div className="years">
           {years && years.map((data)=> {
             return <Year key={data.year} year={data} theme={theme}/>
           })}
         </div>
-        {about[0] && <p>{about[0].hobby}</p>}
       </div>
     </React.Fragment>
   );
