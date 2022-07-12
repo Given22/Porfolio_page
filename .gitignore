@@ -2,8 +2,11 @@
 
 # dependencies
 /node_modules
+/sanity/node_modules
 /.pnp
 .pnp.js
+
+TODO.txt
 
 # testing
 /coverage

@@ -1,0 +1,63 @@
+#MobileMenu.dark{
+  background-color: var(--base-color-light);
+  a {
+    color: var(--base-color-dark);
+  }
+  .mobile_menu_darkModeSwitch {
+    background-color: var(--base-color-dark);
+    color: var(--base-color-light);
+  }
+}
+
+#MobileMenu.light{
+  background-color: var(--base-color-dark);
+  a {
+    color: var(--base-color-light);
+  }
+  .mobile_menu_darkModeSwitch {
+    background-color: var(--base-color-light);
+    color: var(--base-color-dark);
+  }
+}
+
+.mobile_menu_link{
+  scroll-behavior: smooth;
+}
+
+#MobileMenu {
+  position: fixed;
+  right: 0;
+  top: calc(40px + 2rem);
+  max-width: 50vw;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  
+  box-shadow: var(--fancy-shadow);
+  
+  border-radius: 18px 0 0 18px;
+  
+  a{
+    text-decoration: none;
+  }
+    
+  .mobile_menu_darkModeSwitch {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    text-align: center;
+    box-shadow: var(--fancy-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg{
+      cursor: pointer;
+      path{
+        cursor: pointer;
+      }
+    }
+  }
+}

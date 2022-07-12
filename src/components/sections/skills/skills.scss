@@ -1,0 +1,75 @@
+#Skills{
+  box-sizing: border-box;
+  width: 100%;
+  
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+}
+
+.skill div{
+  display: flex;
+  width: 10rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill::after{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  border-radius: 10px;
+  margin: 2rem 0;
+  box-shadow: var(--fancy-shadow);
+}
+
+
+.skill_icon{
+  height: 100px;
+}
+
+#Skills.dark{
+  .skill{
+    color: var(--base-color-light);
+  }
+  .skill::after{
+    background: var(--base-color-light);
+  }
+}
+
+#Skills.light{
+  .skill{
+    color: var(--base-color-dark);
+  }
+  .skill::after{
+    background: var(--base-color-dark);
+  }
+}
+
+// Desktop
+@media screen and (min-width: 1024px) {
+  #Skills{
+    padding: 8% 20%;
+    min-height: 100vh;
+  }
+}
+
+// Tablet
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  #Skills{
+    padding: 10%;
+    min-height: 85vh;
+  }
+}
+
+// Mobile
+@media screen and (max-width: 767px) {
+  #Skills{
+    padding: 5%;
+    min-height: 70vh;
+  }
+}

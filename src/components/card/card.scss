@@ -1,0 +1,127 @@
+.card.dark{
+  background-color: var(--base-color-light);
+  
+  .card_button-link{
+    color: var(--base-color-dark);
+    background-color: var(--base-color-yellow);
+  }
+}
+
+.card.light{
+  background-color: var(--base-color-dark);
+  .card_button-link{
+    color: var(--base-color-yellow);
+    background-color: var(--base-color-blue);
+  }
+}
+
+.card{
+  border-radius: 18px;
+  margin: 0 auto;
+}
+
+.card_bottom{
+  display: flex;
+}
+
+.card_button-link{
+  box-shadow: var(--fancy-shadow);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  svg{
+    cursor: pointer;
+    path{
+      cursor: pointer;
+    }
+  }
+}
+
+.card_top{
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.card_title{
+  color: var(--base-color-light);
+  position: absolute;
+  bottom: 0.5rem;
+  left: 2rem;
+  z-index: 1;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.09em;
+}
+
+.card_img{
+  bottom: 0;
+  width: 100%;
+  border-radius: 18px 18px 0 0;
+}
+
+.card_top::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0px -101px 108px -24px rgba(0, 0, 0, 0.7);
+  border-radius: 18px 18px 0 0;
+}
+
+
+// Desktop
+@media screen and (min-width: 1024px) {
+  .card{
+    width: 80%;
+    .card_bottom{
+      justify-content: center;
+      gap: 5%;
+      .card_button-link{
+        height: 50px;
+        width: 50px;
+        margin: 20px 0;
+      }
+    }    
+  }
+}
+
+// Tablet
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .card{
+    width: 90%;
+    .card_bottom{
+      justify-content: center;
+      gap: 5%;
+      .card_button-link{
+        height: 40px;
+        width: 40px;
+        margin: 20px 0;
+      }
+    }  
+  }
+}
+
+// Mobile
+@media screen and (max-width: 767px) {
+  .card{
+    width: 100%;
+    height: 100%;
+    .card_bottom{
+      justify-content: space-evenly;
+      .card_button-link{
+        height: 40px;
+        width: 40px;
+        margin: 20px 0;
+      }
+    }  
+  }
+}

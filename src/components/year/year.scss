@@ -1,0 +1,85 @@
+// Dark mode
+.year.dark{
+  h2{
+    color: var(--base-color-light);
+  }
+  p{
+    color: var(--base-color-light)
+  }
+}
+
+.year.dark::before{
+  background: var(--base-color-light);
+}
+
+//Light mode
+.year.light{
+  h2{
+    color: var(--base-color-dark);
+  }
+  p{
+    color: var(--base-color-blue)
+  }
+}
+
+.year.light::before{
+  background: var(--base-color-dark);
+}
+
+
+
+// For all devices:
+.year{
+  display: flex;
+  flex-direction: column;
+  .year-content{
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+  }
+}
+
+.year::before{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  border-radius: 10px;
+  box-shadow: var(--fancy-shadow);
+}
+
+
+// Desktop
+@media screen and (min-width: 1024px) {
+  .year{
+    .year-content{
+      p{
+        max-width: 70%;
+      }
+    }
+  }
+}
+
+// Tablet
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .year{
+    .year-content{
+      p{
+        max-width: 70%;
+      }
+    }
+  }
+}
+
+// Mobile
+@media screen and (max-width: 767px) {
+  .year{
+    .year-content{
+      p{
+        max-width: 80%;
+      }
+    }
+  }
+}
