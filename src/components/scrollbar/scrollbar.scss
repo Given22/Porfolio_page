@@ -4,7 +4,6 @@
   top: 50%;
   transform: translatey(-50%);
   box-sizing: border-box;
-  padding: 1rem 6rem;
   
   .dots{
     display: flex;
@@ -37,5 +36,25 @@
 #ScrollBar.dark{
   .dot_icon{
     color: var(--base-color-light);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #ScrollBar{
+    padding: 1rem 6rem;
+  }
+}
+
+// Tablet
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  #ScrollBar{
+    padding: 3rem;
+  }
+}
+
+// Mobile
+@media screen and (max-width: 767px) {
+  #ScrollBar{
+    padding: 1rem;
   }
 }
