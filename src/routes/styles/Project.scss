@@ -75,12 +75,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  cursor: pointer;
   border-radius: 100%;
   box-shadow: var(--fancy-shadow);
   
   .project_link-icon{
+    cursor: pointer;
     color: var(--base-color-yellow);
+    path{
+      cursor: pointer;
+    }
   }
 }
 

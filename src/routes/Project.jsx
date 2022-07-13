@@ -62,12 +62,13 @@ export default function Project() {
             {project.live && (
               <motion.a
                 href={project.live || ""}
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.5 }}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="project_button-link"
                 initial={{ y: "60vh" }}
                 animate={{ y: 0 }}
-                transition={{ duration: 1, delay: 0 }}
               >
                 <Icon
                   className="project_link-icon"
@@ -79,12 +80,13 @@ export default function Project() {
             {project.github && (
               <motion.a
                 href={project.github || ""}
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.5 }}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="project_button-link"
                 initial={{ y: "60vh" }}
                 animate={{ y: 0 }}
-                transition={{ duration: 1, delay: 0.1 }}
               >
                 <Icon
                   className="project_link-icon"
