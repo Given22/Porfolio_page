@@ -12,7 +12,7 @@
   
 ## Live
 
-  https://github.com/Given22/Porfolio_page
+  https://damian-s-portfolio.web.app/
 
 ## Technologies
   
