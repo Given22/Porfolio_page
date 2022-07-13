@@ -2,8 +2,6 @@
 
 ## Poza portfolio
 
-- strony hostowane na netlify 
-- wszystkie projekty zbudowane np. przy pomocy parcela/webpacka
 - poprawić linkedin
 - napisać CV
-- na stonie banku dodać pokazywanie istniejących kont i pass do nich.
+
