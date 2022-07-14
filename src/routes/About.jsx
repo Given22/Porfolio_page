@@ -33,7 +33,7 @@ export default function About() {
 
     getDataFromFirestore(db, "years")
       .then((data) => {
-        setYears([...data].sort((a, b) => b.year - a.year));
+        setYears([...data].sort((a, b) => b.id - a.id));
       })
       .catch((e) => console.error(e));
   }, []);
