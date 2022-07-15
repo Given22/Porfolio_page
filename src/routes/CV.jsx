@@ -29,7 +29,6 @@ export default function CV() {
     <React.Fragment>
       <Links links={links} theme={theme} />
       <div id="CV" className={theme}>
-        <h2>Damian Sroczyński</h2>
         <a href={cvImagePDF} target="_blank" download rel="noreferrer">
           <img src={cvImageURL} alt="CV" />
         </a>
