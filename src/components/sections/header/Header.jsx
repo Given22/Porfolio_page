@@ -15,7 +15,7 @@ export default function Header({ refLink, theme }) {
       >
         <h1>Hi i’m Damian </h1>
         <h2>Front-end Developer</h2>
-        <p>JavaScript & React developer</p>
+        <p>TypeScript developer</p>
       </motion.div>
       <motion.div
         className="header_links"
