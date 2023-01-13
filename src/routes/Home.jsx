@@ -48,7 +48,7 @@ export default function Home() {
       <Header refLink={headerRef} theme={theme}/>
       <Projects refLink={projectsRef} projects={projects} theme={theme}/>
       <Skills refLink={skillsRef} skills={skills} theme={theme}/>
-      <Contact refLink={contactRef} links={links} theme={theme}/>
+      <Contact refLink={contactRef} links={links} theme={theme} InViewport={InViewport.contactInV}/>
     </div>
   );
 }
