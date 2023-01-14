@@ -1,8 +1,8 @@
-#Skills{
+#Skills {
   box-sizing: border-box;
   width: 100%;
-  
-  display:flex;
+
+  display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -10,14 +10,14 @@
   align-content: center;
 }
 
-.skill div{
+.skill div {
   display: flex;
   width: 10rem;
   flex-direction: column;
   align-items: center;
 }
 
-.skill::after{
+.skill::after {
   content: "";
   display: block;
   width: 100%;
@@ -27,49 +27,76 @@
   box-shadow: var(--fancy-shadow);
 }
 
-
-.skill_icon{
+.skill_icon {
   height: 100px;
 }
 
-#Skills.dark{
-  .skill{
+#Skills.dark {
+  .skill {
     color: var(--base-color-light);
   }
-  .skill::after{
+  .skill::after {
     background: var(--base-color-light);
   }
 }
 
-#Skills.light{
-  .skill{
+#Skills.light {
+  .skill {
     color: var(--base-color-dark);
   }
-  .skill::after{
+  .skill::after {
     background: var(--base-color-dark);
   }
 }
 
 // Desktop
-@media screen and (min-width: 1024px) {
-  #Skills{
-    padding: 8% 20%;
-    min-height: 100vh;
+@media (pointer: fine) {
+  // Big
+  @media (min-width: 1024px) {
+    #Skills {
+      padding: 8% 20%;
+      min-height: 100vh;
+    }
   }
-}
-
-// Tablet
-@media screen and (max-width: 1023px) and (min-width: 768px) {
-  #Skills{
-    padding: 10%;
-    min-height: 85vh;
+  // Medium
+  @media (max-width: 1023px) and (min-width: 768px) {
+    #Skills {
+      padding: 10%;
+      min-height: 100vh;
+    }
+  }
+  // Small
+  @media (max-width: 767px) {
+    #Skills {
+      padding: 5%;
+      min-height: 100vh;
+    }
   }
 }
 
 // Mobile
-@media screen and (max-width: 767px) {
-  #Skills{
-    padding: 5%;
-    min-height: 70vh;
+@media only screen and (hover: none) and (pointer: coarse) {
+  // Big
+  @media (min-width: 1024px) {
+    #Skills {
+      padding: 8% 20%;
+      min-height: 100vh;
+    }
+  }
+
+  // Medium
+  @media (max-width: 1023px) and (min-width: 768px) {
+    #Skills {
+      padding: 10%;
+      min-height: 70vh;
+    }
+  }
+
+  // Small
+  @media (max-width: 767px) {
+    #Skills {
+      padding: 5%;
+      min-height: 50vh;
+    }
   }
 }

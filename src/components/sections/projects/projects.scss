@@ -1,8 +1,8 @@
-#Projects{
+#Projects {
   box-sizing: border-box;
   width: 100%;
   min-height: 100vh;
-  
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,14 +10,14 @@
   align-items: center;
 }
 
-#Projects_Slider{
+#Projects_Slider {
   width: 70%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  .slider_top{
+  .slider_top {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -25,58 +25,68 @@
   }
 }
 
-.slider_arrow{
+.slider_arrow {
   display: flex;
   align-items: center;
-  filter: drop-shadow(0px 39px 11px rgba(0, 0, 0, 0.01)) drop-shadow(0px 25px 10px rgba(0, 0, 0, 0.04)) drop-shadow(0px 14px 9px rgba(0, 0, 0, 0.15)) drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.26)) drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.29)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0px 39px 11px rgba(0, 0, 0, 0.01))
+    drop-shadow(0px 25px 10px rgba(0, 0, 0, 0.04))
+    drop-shadow(0px 14px 9px rgba(0, 0, 0, 0.15))
+    drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.26))
+    drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.29))
+    drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.3));
 }
 
-
-#swiper{
+#swiper {
   width: 50vw;
-  filter: drop-shadow(0px 39px 11px rgba(0, 0, 0, 0.01)) drop-shadow(0px 25px 10px rgba(0, 0, 0, 0.04)) drop-shadow(0px 14px 9px rgba(0, 0, 0, 0.15)) drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.26)) drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.29)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0px 39px 11px rgba(0, 0, 0, 0.01))
+    drop-shadow(0px 25px 10px rgba(0, 0, 0, 0.04))
+    drop-shadow(0px 14px 9px rgba(0, 0, 0, 0.15))
+    drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.26))
+    drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.29))
+    drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.3));
 }
 
-.arrow_left, .arrow_right{
+.arrow_left,
+.arrow_right {
   cursor: pointer;
-  path{
+  path {
     cursor: pointer;
   }
 }
 
-#Projects.light{
-  .slider_arrow{
+#Projects.light {
+  .slider_arrow {
     color: var(--base-color-dark);
   }
-  .mobile_arrows{
-    .mobile_arrow{
+  .mobile_arrows {
+    .mobile_arrow {
       background-color: var(--base-color-blue);
-      color: var(--base-color-yellow)
+      color: var(--base-color-yellow);
     }
   }
 }
 
-#Projects.dark{
-  .slider_arrow{
+#Projects.dark {
+  .slider_arrow {
     color: var(--base-color-light);
   }
-  .mobile_arrows{
-    .mobile_arrow{
+  .mobile_arrows {
+    .mobile_arrow {
       background-color: var(--base-color-yellow);
-      color: var(--base-color-blue)
+      color: var(--base-color-blue);
     }
   }
 }
 
-.mobile_arrows{
+.mobile_arrows {
   display: flex;
   flex-direction: row;
-  width : 100%;
+  width: 100%;
   justify-content: space-evenly;
   align-items: center;
   margin-top: 2rem;
-  
-  .mobile_arrow{
+
+  .mobile_arrow {
     border-radius: 100%;
     height: 40px;
     width: 40px;
@@ -84,7 +94,7 @@
     align-items: center;
     justify-content: center;
     box-shadow: var(--fancy-shadow);
-    .mobile_arrow-icon{
+    .mobile_arrow-icon {
       width: 20px;
       height: 20px;
     }
@@ -92,32 +102,56 @@
 }
 
 // Desktop
-@media screen and (min-width: 1024px) {
-  #Projects{
-    min-height: 100vh;
+@media (pointer: fine) {
+  // Medium
+  @media (max-width: 1023px) and (min-width: 768px) {
+    #swiper {
+      width: 40vw;
+    }
   }
-}
 
-// Tablet
-@media screen and (max-width: 1023px) and (min-width: 768px) {
-  #Projects{
-    min-height: 90vh;
-  }
-  #swiper {
-    width: 40vw;
+  // Small
+  @media (max-width: 767px) {
+    .slider_arrow {
+      display: none;
+    }
+
+    #swiper {
+      width: 90vw;
+    }
   }
 }
 
 // Mobile
-@media screen and (max-width: 767px) {
-  .slider_arrow {
-    display: none;
+// Big
+@media only screen and (hover: none) and (pointer: coarse) {
+  @media (min-width: 1024px) {
+    #Projects {
+      min-height: 100vh;
+    }
   }
-  #Projects{
-    min-height: 70vh;
+
+  // Medium
+  @media (max-width: 1023px) and (min-width: 768px) {
+    #Projects {
+      min-height: 90vh;
+    }
+    #swiper {
+      width: 40vw;
+    }
   }
-  
-  #swiper {
-    width: 90vw;
+
+  // Small
+  @media (max-width: 767px) {
+    .slider_arrow {
+      display: none;
+    }
+    #Projects {
+      min-height: 70vh;
+    }
+
+    #swiper {
+      width: 90vw;
+    }
   }
 }

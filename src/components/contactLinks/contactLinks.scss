@@ -1,63 +1,73 @@
-#Contact_Links{
+#Contact_Links {
   display: flex;
-  gap: 10vw;
   width: 100%;
+  position: relative;
   justify-content: center;
   box-sizing: border-box;
   flex-direction: row;
-  height: 100vh;
+  height: 100%;
   align-items: center;
 }
 
-.contact_link{
+.contacts {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  gap: 10vw;
+}
+
+.contact_link {
   color: var(--base-color-yellow);
   background-color: var(--base-color-dark);
   border-radius: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   cursor: pointer;
-  
+
   height: 80px;
   width: 80px;
   text-decoration: none;
   text-align: center;
-  svg{
+  svg {
     height: 30px;
     width: 30px;
     cursor: pointer;
-    path{
+    path {
       cursor: pointer;
     }
   }
 }
 
-.contact_name{
+.contact_name {
   opacity: 0;
   color: var(--base-color-dark);
 }
 
-.contact{
+.contact {
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 1rem;
 }
-  
-#Contact_Links.dark{
-  .contact_link{
+
+#Contact_Links.dark {
+  .contact_link {
     color: var(--base-color-blue);
     background-color: var(--base-color-light);
   }
-  .contact_name{
-    color: var(--base-color-light)
+  .contact_name {
+    color: var(--base-color-light);
   }
 }
 
 // Desktop
 @media screen and (min-width: 1024px) {
-  #Contact_Links{
+  #Contact_Links {
     gap: 10vw;
     padding: 2rem 3rem;
     min-height: 90vh;
@@ -66,7 +76,7 @@
 
 // Tablet
 @media screen and (max-width: 1023px) and (min-width: 768px) {
-  #Contact_Links{
+  #Contact_Links {
     gap: 10vw;
     padding: 2rem 3rem;
     min-height: 80vh;
@@ -75,22 +85,21 @@
 
 // Mobile
 @media screen and (max-width: 767px) {
-  #Contact_Links{
+  #Contact_Links {
     gap: 5vw;
     min-height: 60vh;
-    .contact{
-      h2{
+    .contact {
+      h2 {
         font-size: 1rem;
       }
     }
-    .contact_link{
+    .contact_link {
       height: 70px;
       width: 70px;
-      svg{
+      svg {
         height: 30px;
         width: 30px;
       }
     }
   }
 }
-  

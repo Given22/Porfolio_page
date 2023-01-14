@@ -14,7 +14,7 @@ export default function Links({ links, isInViewport, refe }) {
       <div ref={refe} id="Contact_Links" className={theme}>
         <AnimatePresence>
           {links && isInViewport && (
-            <>
+            <div className="contacts">
               <div className="contact">
                 <motion.div
                   className="contact_link"
@@ -35,10 +35,10 @@ export default function Links({ links, isInViewport, refe }) {
                 <motion.h2
                   className="contact_name"
                   href={links[0].linkedin}
-                  initial={{ y: "-40", scale: 0 }}
+                  initial={{ y: "-40", scale: 0.1 }}
                   animate={{ y: 0, scale: 1, opacity: 1 }}
                   transition={{ duration: 0.5, delay: 1 }}
-                  exit={{ scale: "0", transition: { duration: 0.5, delay: 0 } }}
+                  exit={{ scale: "0.1", transition: { duration: 0.5, delay: 0 } }}
                 >
                   Linkedin
                 </motion.h2>
@@ -67,11 +67,11 @@ export default function Links({ links, isInViewport, refe }) {
                 </motion.div>
                 <motion.h2
                   className="contact_name"
-                  initial={{ y: "-40", scale: 0 }}
+                  initial={{ y: "-40", scale: 0.1 }}
                   animate={{ y: 0, scale: 1, opacity: 1 }}
                   transition={{ duration: 0.5, delay: 1.1 }}
                   exit={{
-                    scale: "0",
+                    scale: "0.1",
                     transition: { duration: 0.5, delay: 0.1 },
                   }}
                 >
@@ -102,18 +102,18 @@ export default function Links({ links, isInViewport, refe }) {
                 </motion.div>
                 <motion.h2
                   className="contact_name"
-                  initial={{ y: "-40", scale: 0 }}
+                  initial={{ y: "-40", scale: 0.1 }}
                   animate={{ y: 0, scale: 1, opacity: 1 }}
                   transition={{ duration: 0.5, delay: 1.2 }}
                   exit={{
-                    scale: "0",
+                    scale: "0.1",
                     transition: { duration: 0.5, delay: 0.2 },
                   }}
                 >
                   Email
                 </motion.h2>
               </div>
-            </>
+            </div>
           )}
         </AnimatePresence>
       </div>
