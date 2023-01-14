@@ -29,9 +29,16 @@ export default function Navbar() {
         animate={{ y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        <motion.div className="logo" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.5 }}>
+        <motion.div
+          className="logo"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.5 }}
+        >
           <a href="/#Header" className="navbar_link">
-            <h1>D</h1>
+            <Icon
+              className="navbar_link-icon"
+              icon="bxs:home-alt-2"
+            />
           </a>
         </motion.div>
         {!isMobile && <Menu />}
