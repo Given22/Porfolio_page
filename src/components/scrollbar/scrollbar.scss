@@ -51,7 +51,7 @@
 }
 
 // Tablet
-@media screen and (max-width: 1023px) and (min-width: 768px) {
+@media screen and (max-width: 1023.98px) and (min-width: 768px) {
   #ScrollBar{
     padding: 3rem;
     .dots{
@@ -64,7 +64,7 @@
 }
 
 // Mobile
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
   #ScrollBar{
     padding: 1rem;
     .dots{
