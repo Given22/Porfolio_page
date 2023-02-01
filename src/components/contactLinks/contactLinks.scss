@@ -75,7 +75,7 @@
 }
 
 // Tablet
-@media screen and (max-width: 1023.98px) and (min-width: 768px) {
+@media screen and (max-width: 1023px) and (min-width: 768px) {
   #Contact_Links {
     gap: 10vw;
     padding: 2rem 3rem;
@@ -84,7 +84,7 @@
 }
 
 // Mobile
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 767px) {
   #Contact_Links {
     gap: 5vw;
     min-height: 60vh;

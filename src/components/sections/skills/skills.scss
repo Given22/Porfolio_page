@@ -49,26 +49,54 @@
   }
 }
 
-// Big
-@media (min-width: 1024px) {
-  #Skills {
-    padding: 8% 20%;
-    min-height: 100vh;
+// Desktop
+@media (pointer: fine) {
+  // Big
+  @media (min-width: 1024px) {
+    #Skills {
+      padding: 8% 20%;
+      min-height: 100vh;
+    }
+  }
+  // Medium
+  @media (max-width: 1023px) and (min-width: 768px) {
+    #Skills {
+      padding: 10%;
+      min-height: 100vh;
+    }
+  }
+  // Small
+  @media (max-width: 767px) {
+    #Skills {
+      padding: 5%;
+      min-height: 100vh;
+    }
   }
 }
 
-// Medium
-@media (max-width: 1023.98px) and (min-width: 768px) {
-  #Skills {
-    padding: 10%;
-    min-height: 70vh;
+// Mobile
+@media only screen and (hover: none) and (pointer: coarse) {
+  // Big
+  @media (min-width: 1024px) {
+    #Skills {
+      padding: 8% 20%;
+      min-height: 100vh;
+    }
   }
-}
 
-// Small
-@media (max-width: 767.98px) {
-  #Skills {
-    padding: 5%;
-    min-height: 50vh;
+  // Medium
+  @media (max-width: 1023px) and (min-width: 768px) {
+    #Skills {
+      padding: 10%;
+      min-height: 70vh;
+    }
+  }
+
+  // Small
+  @media (max-width: 767px) {
+    #Skills {
+      padding: 5%;
+      min-height: 50vh;
+    }
   }
 }

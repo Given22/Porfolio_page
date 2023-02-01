@@ -30,7 +30,7 @@ body {
   }
   
   ::-webkit-scrollbar-track{
-    background: none;
+    background: var(--scrollbar-background-track);
   }
 }
 
